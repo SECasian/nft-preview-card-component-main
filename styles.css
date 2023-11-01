@@ -1,0 +1,167 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(216, 50%, 16%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+}
+
+main {
+  max-width: 1440px;
+  min-width: 375px;
+  margin: auto;
+}
+
+.card {
+  width: 330px;
+  height: auto;
+  background-color: var(--card-bg);
+  padding: 30px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
+  /* border: 1px solid black; */
+  border-radius: 15px;
+}
+
+.card-image {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  width: 100%;
+  display: block;
+}
+
+.card-image:hover {
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: hsl(178, 100%, 50%, 0.3);
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: hsl(178, 100%, 50%, 0.3);
+  display: none;
+}
+
+.image-overlay img {
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card h3 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+h3:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.card .text {
+  color: hsla(0, 0%, 100%, 0.192);
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: middle;
+  font-weight: 300;
+}
+
+.price-time {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.price {
+  color: var(--Cyan);
+  font-size: 18px;
+  text-align: middle;
+  font-weight: 400;
+}
+
+.time {
+  color: hsla(0, 0%, 100%, 0.192);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.price-time img {
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: -2.5px;
+}
+
+.line {
+  border-bottom: 2px solid hsla(0, 0%, 100%, 0.192);
+}
+
+.autor {
+  display: flex;
+  margin-top: 15px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.autor img {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.autor p {
+  display: inline-block;
+  color: hsla(0, 0%, 100%, 0.192);
+  font-weight: 300;
+}
+
+.autor .creator {
+  color: white;
+}
+
+.creator:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
